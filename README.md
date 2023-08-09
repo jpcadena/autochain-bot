@@ -132,6 +132,7 @@ solution
 5. Install requirements with PIP
     ```
     pip install -r requirements.txt
+    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
     ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
