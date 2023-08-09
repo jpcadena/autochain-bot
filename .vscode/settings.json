@@ -1,0 +1,25 @@
+{
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.mypyArgs": ["--config-file=pyproject.toml"],
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--config=pyproject.toml"],
+  "python.formatting.blackPath": "${workspaceFolder}/venv/bin/black",
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.fixAll.ruff": true,
+      "source.organizeImports": true,
+      "source.organizeImports.ruff": true
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.tabSize": 4
+  },
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "strict",
+  "isort.args": ["--profile", "black"],
+  "black-formatter.args": ["--config", "pyproject.toml"],
+  "mypy-type-checker.args": ["--config-file=pyproject.toml"]
+}

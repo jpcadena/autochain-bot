@@ -1,0 +1,34 @@
+repos:
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        language_version: python3.11
+
+  - repo: https://github.com/psf/black
+    rev: 23.7.0
+    hooks:
+      - id: black
+        args: [--check]
+        language_version: python3.11
+
+#  - repo: https://github.com/pre-commit/mirrors-mypy
+#    rev: v1.4.1
+#    hooks:
+#      - id: mypy
+#        additional_dependencies: [pydantic]
+#        exclude: "tests/"
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.0.283
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
+
+  - repo: local
+    hooks:
+      - id: block-env
+        name: Block .env file
+        entry: bash -c 'if git diff --cached --name-only | grep -qE "^.env|^.env.example"; then echo ".env files must not be committed" && exit 1; else exit 0; fi'
+        language: system
+        types: [text]
