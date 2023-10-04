@@ -60,7 +60,7 @@ packaging==23.1
 pandas==2.0.3
 pandas-stubs==2.0.2.230605
 pathspec==0.11.2
-Pillow==9.3.0
+Pillow==10.0.1
 platformdirs==3.10.0
 pluggy==1.2.0
 posthog==3.0.1
