@@ -21,7 +21,7 @@ et-xmlfile==1.1.0
 fastapi==0.99.1
 filelock==3.12.2
 flatbuffers==23.5.26
-fonttools==4.42.0
+fonttools==4.43.0
 frozenlist==1.4.0
 fsspec==2023.6.0
 ghp-import==2.1.0
